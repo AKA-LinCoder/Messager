@@ -12,7 +12,7 @@ class RegisterViewController: UIViewController {
     
     private let imageView:UIImageView = {
        let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "preson")
+        imageView.image = UIImage(systemName: "person.circle")
         imageView.tintColor = .gray
         imageView.layer.masksToBounds = true
         imageView.layer.borderWidth = 2
@@ -158,26 +158,45 @@ class RegisterViewController: UIViewController {
         lastNameField.resignFirstResponder()
         guard let firstName = firstNameField.text,let lastName = lastNameField.text, let email = emailField.text,let password = passwordField.text,
               !firstName.isEmpty,!lastName.isEmpty,!email.isEmpty,!password.isEmpty,password.count>=4 else{
-            alertUserLoginError()
+            alertUserLoginError(message: "Please enter all information to create a new account ")
             return
         }
         
-        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            guard let res = result, error == nil else{
-                print("eror 是 \(error?.localizedDescription)")
-                print("error happen")
+        Databasemanager.shared.userExists(with: email) { [weak self] exists in
+            
+            print("hhh")
+            guard let stongSelf = self else{
                 return
             }
             
-            let user = res.user
-            print("Create user \(user)")
+            guard !exists else{
+                //user exists
+                stongSelf.alertUserLoginError(message: "User have exists!")
+                return
+            }
+            
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) {  authResult, error in
+                
+               
+                guard authResult != nil, error == nil else{
+                   
+                    return
+                }
+                
+                Databasemanager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                stongSelf.navigationController?.dismiss(animated: true, completion: nil)
+                
+            }
             
         }
         
+        
+       
+        
     }
     
-    func alertUserLoginError(){
-        let alert = UIAlertController(title: "Woops", message: "Please enter all information to create a new account ", preferredStyle: .alert)
+    func alertUserLoginError(message:String){
+        let alert = UIAlertController(title: "Woops", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
