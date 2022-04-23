@@ -7,8 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import JGProgressHUD
 
 class RegisterViewController: UIViewController {
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     private let imageView:UIImageView = {
        let imageView = UIImageView()
@@ -162,11 +165,17 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        spinner.show(in: view)
+        
         Databasemanager.shared.userExists(with: email) { [weak self] exists in
             
             print("hhh")
             guard let stongSelf = self else{
                 return
+            }
+            DispatchQueue.main.async {
+        
+                stongSelf.spinner.dismiss()
             }
             
             guard !exists else{

@@ -21,6 +21,7 @@
 		699C87EB28117B7200F0E1E4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699C87EA28117B7200F0E1E4 /* ProfileViewController.swift */; };
 		699C87EF28117D4400F0E1E4 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699C87EE28117D4400F0E1E4 /* NewConversationViewController.swift */; };
 		69D5830A28123C1700F776B0 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D5830928123C1700F776B0 /* DatabaseManager.swift */; };
+		69D6C3D328142A8500BDEA9A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D6C3D228142A8500BDEA9A /* ChatViewController.swift */; };
 		69D721FB28119AE500209B02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D721FA28119AE500209B02 /* Extensions.swift */; };
 		69D721FD2811AC1B00209B02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69D721FC2811AC1B00209B02 /* GoogleService-Info.plist */; };
 		B5140325628E1AE43A49D620 /* Pods_Messager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F3A8B7941B73114195736A /* Pods_Messager.framework */; };
@@ -44,6 +45,7 @@
 		699C87EA28117B7200F0E1E4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		699C87EE28117D4400F0E1E4 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		69D5830928123C1700F776B0 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		69D6C3D228142A8500BDEA9A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		69D721FA28119AE500209B02 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		69D721FC2811AC1B00209B02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88F3A8B7941B73114195736A /* Pods_Messager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				699C87E628117B2800F0E1E4 /* VideoPlayerViewController.swift */,
 				699C87EA28117B7200F0E1E4 /* ProfileViewController.swift */,
 				699C87EE28117D4400F0E1E4 /* NewConversationViewController.swift */,
+				69D6C3D228142A8500BDEA9A /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				699C87EB28117B7200F0E1E4 /* ProfileViewController.swift in Sources */,
 				699C87EF28117D4400F0E1E4 /* NewConversationViewController.swift in Sources */,
 				699C87DF2811794400F0E1E4 /* ConversationsViewController.swift in Sources */,
+				69D6C3D328142A8500BDEA9A /* ChatViewController.swift in Sources */,
 				699C87E528117B1400F0E1E4 /* PhotoViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
