@@ -2,12 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>拍照上传头像</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>选择图片上传头像</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>上传头像</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb358458182907116</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.553481658672-vgg4ptdvd7sir2fjo5o5gjl0d22c1re4</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>358458182907116</string>
+	<key>FacebookClientToken</key>
+	<string>f0235cda1ed0dd3cda46b76cbe35d101</string>
+	<key>FacebookDisplayName</key>
+	<string>My Messenger</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

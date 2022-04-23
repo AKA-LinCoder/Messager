@@ -7,22 +7,23 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
 
 class ConversationsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
         
-    
+       
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         validateAuth()
-     
-       
+        
+        
     }
     
     
@@ -35,7 +36,7 @@ class ConversationsViewController: UIViewController {
         }
     }
     
-
-
-
+    
+    
+    
 }
